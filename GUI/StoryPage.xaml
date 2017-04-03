@@ -1,0 +1,56 @@
+﻿<Page x:Class="StoryTelling1.StoryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+	Title="StartPage" Height="{Binding SystemParameters.PrimaryScreenHeight}"  Width="{Binding SystemParameters.PrimaryScreenWidth}">
+    <Grid Margin="80,200,80,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="6*" />
+
+        </Grid.ColumnDefinitions>
+        <!--
+        <Border BorderBrush="#FFFFFF" BorderThickness="1" Grid.Row="0" Grid.Column="0" />
+        <Border BorderBrush="#FFFFFF" BorderThickness="1" Grid.Row="0" Grid.Column="1" />
+        
+        <Border BorderBrush="#FFFFFF" BorderThickness="1" Grid.Row="1" Grid.Column="0" />
+        <Border BorderBrush="#FFFFFF" BorderThickness="1" Grid.Row="1" Grid.Column="1" />
+        
+        <Border BorderBrush="#FFFFFF" BorderThickness="1" Grid.Row="2" Grid.Column="0" />
+        <Border BorderBrush="#FFFFFF" BorderThickness="1" Grid.Row="2" Grid.Column="1" />
+    -->
+
+        <FlowDocumentScrollViewer x:Name="fdViewer" Grid.Row="1" Grid.ColumnSpan="2"  ScrollViewer.VerticalScrollBarVisibility="Auto" />
+        <!-- <TextBlock x:Name="story" FontSize="22" FontWeight="Bold" FontFamily="Comic Sans MS" TextWrapping ="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,5,0,5"/>-->
+        <Label x:Name="fdViewerFinal" Grid.Row="1" Grid.ColumnSpan="2" Visibility="Hidden" HorizontalAlignment="Right" Margin="180,180,700,150" />
+        <Image x:Name="image" Grid.Column="1" Grid.Row="0" Source="image/show_text2.jpg" MouseDown="showText" HorizontalAlignment="Right" Width="90" Height="90" VerticalAlignment="Top" Margin="0,-50,0,0" />
+
+        <Grid Grid.Row="2" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="DP1" HorizontalAlignment="Stretch" Height="150" VerticalAlignment="Center" Click="btnClicked1" FontWeight="Bold" FontSize="22" FontFamily="Comic Sans MS" Margin="0,15,10,0" Grid.Row="0" Grid.Column="0">
+                <TextBlock x:Name="txtDP1" TextWrapping="Wrap"  VerticalAlignment="Center"><Run Text="This is a fairly long button label"/></TextBlock>
+            </Button>
+            <Button x:Name="DP2" HorizontalAlignment="Stretch" Height="150" VerticalAlignment="Center" Click="btnClicked2" FontWeight="Bold" FontSize="22" FontFamily="Comic Sans MS" Margin="10,15,0,0" Grid.Row="0" Grid.Column="1" >
+                <TextBlock x:Name="txtDP2" TextWrapping="Wrap" VerticalAlignment="Center"><Run Text="This is a fairly long button label"/></TextBlock>
+            </Button>
+            <!--
+            <Border BorderBrush="#000000" BorderThickness="1" Grid.Row="0" Grid.Column="0" />
+            <Border BorderBrush="#000000" BorderThickness="1" Grid.Row="0" Grid.Column="1" />
+            -->
+        </Grid>
+    </Grid>
+</Page>
